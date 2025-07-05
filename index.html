@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Janice Kaori - Portofolio Profesional</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #ff6b9d;
+      --primary-dark: #e05d8a;
+      --secondary-color: #ffd6e5;
+      --dark-color: #2a2a2a;
+      --light-color: #fff9fb;
+      --text-color: #444;
+      --light-gray: #f8f9fa;
+    }
+    
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      color: var(--text-color);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5 {
+      font-weight: 700;
+      color: var(--dark-color);
+    }
+    
+    h2 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-title h2 {
+      display: inline-block;
+    }
+    
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar.scrolled {
+      padding: 0.7rem 0;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--primary-color) !important;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-brand span {
+      margin-left: 10px;
+    }
+    
+    .nav-link {
+      color: var(--dark-color) !important;
+      font-weight: 500;
+      margin: 0 0.8rem;
+      position: relative;
+      font-size: 0.95rem;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, white 100%);
+      padding: 8rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 107, 157, 0.1);
+      border-radius: 50%;
+    }
+    
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 107, 157, 0.08);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      border: 6px solid white;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      object-fit: cover;
+      z-index: 1;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .profile-img:hover {
+      transform: scale(1.03);
+    }
+    
+    .hero-title {
+      font-size: 3rem;
+      margin: 1.8rem 0 0.8rem;
+      color: var(--dark-color);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-text {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .social-icons {
+      margin-top: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: white;
+      border-radius: 50%;
+      margin: 0 0.7rem;
+      color: var(--primary-color);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    
+    .social-icons a:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255, 107, 157, 0.3);
+    }
+    
+    .section {
+      padding: 6rem 0;
+      position: relative;
+    }
+    
+    .section-light {
+      background-color: var(--light-color);
+    }
+    
+    .section-dark {
+      background-color: var(--dark-color);
+      color: white;
+    }
+    
+    .section-dark h2,
+    .section-dark h3,
+    .section-dark h4 {
+      color: white;
+    }
+    
+    .skill-item {
+      margin-bottom: 2rem;
+    }
+    
+    .skill-name {
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .skill-name span {
+      color: var(--primary-color);
+    }
+    
+    .progress {
+      height: 10px;
+      border-radius: 5px;
+      background-color: #e9ecef;
+    }
+    
+    .progress-bar {
+      background-color: var(--primary-color);
+      border-radius: 5px;
+    }
+    
+    .gallery-container {
+      position: relative;
+    }
+    
+    .gallery-item {
+      position: relative;
+      margin-bottom: 25px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    .gallery-item img {
+      transition: transform 0.7s;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .gallery-item:hover {
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(255, 107, 157, 0.9), transparent);
+      color: white;
+      padding: 1.5rem;
+      transform: translateY(100%);
+      transition: transform 0.4s;
+    }
+    
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+    
+    .gallery-caption h5 {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    
+    .achievement-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border-left: 5px solid var(--primary-color);
+      transition: all 0.4s;
+      height: 100%;
+    }
+    
+    .achievement-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    
+    .achievement-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-info {
+      margin-bottom: 2.5rem;
+    }
+    
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.5rem;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      transition: all 0.3s;
+    }
+    
+    .contact-info-item:hover .contact-icon {
+      background: var(--dark-color);
+      transform: rotate(10deg);
+    }
+    
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      transition: all 0.3s;
+    }
+    
+    .contact-info-item:hover {
+      transform: translateX(5px);
+    }
+    
+    .contact-info-text h4 {
+      margin-bottom: 0.3rem;
+    }
+    
+    .contact-info-text p {
+      margin-bottom: 0;
+    }
+    
+    .form-control {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s;
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.25rem rgba(255, 107, 157, 0.25);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+    }
+    
+    .footer {
+      background: var(--dark-color);
+      color: white;
+      padding: 4rem 0 2rem;
+      position: relative;
+    }
+    
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    }
+    
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+    
+    .footer-logo span {
+      color: var(--primary-color);
+    }
+    
+    .footer-about {
+      margin-bottom: 2rem;
+    }
+    
+    .footer-links h4,
+    .footer-contact h4 {
+      color: white;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-links h4::after,
+    .footer-contact h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--primary-color);
+    }
+    
+    .footer-links ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary-color);
+      padding-left: 5px;
+    }
+    
+    .footer-contact p {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .footer-contact i {
+      color: var(--primary-color);
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+    
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin-right: 10px;
+      color: white;
+      transition: all 0.3s;
+    }
+    
+    .footer-social a:hover {
+      background: var(--primary-color);
+      transform: translateY(-3px);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s;
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: var(--dark-color);
+      transform: translateY(-5px);
+    }
+    
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+    
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .section {
+        padding: 4rem 0;
+      }
+      
+      .section-title {
+        margin-bottom: 3rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .profile-img {
+        width: 180px;
+        height: 180px;
+      }
+      
+      .contact-info-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-section {
+        padding: 6rem 0 3rem;
+      }
+      
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      
+      .section {
+        padding: 3rem 0;
+      }
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <i class="fas fa-star" style="color: var(--primary-color);"></i>
+      <span>Janice Kaori</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#achievements">Prestasi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="container">
+    <img src="IMG_20241230_125724_339.jpg" class="profile-img rounded-circle mb-4 animate" alt="Janice Kaori">
+    <h1 class="hero-title animate delay-1">Janice Kaori</h1>
+    <p class="hero-subtitle animate delay-1">Penari Profesional | Fotografer | Atlet Muda</p>
+    <p class="hero-text animate delay-2">Menggabungkan seni gerak dan visual untuk menciptakan karya yang menginspirasi dan memukau.</p>
+    <div class="social-icons animate delay-3">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0 animate">
+        <h2>Tentang Saya</h2>
+        <p>Janice Kaori, lahir pada 19 Mei 2009 di Tanjung Pinang, adalah seniman multitalenta dengan spesialisasi dalam seni pertunjukan dan visual. Sejak kecil, saya telah mengembangkan passion dalam dunia tari dan fotografi, yang kemudian berkembang menjadi karier profesional.</p>
+        <p>Dengan latar belakang yang kuat dalam berbagai genre tari (Hip-Hop, Ballroom, Swing) dan fotografi, saya menggabungkan disiplin artistik dengan ketelitian teknis untuk menciptakan karya yang memukau dan penuh makna.</p>
+        <p>Selain di bidang seni, saya juga aktif dalam olahraga seperti basket dan gimnastik, yang membantu saya menjaga kebugaran fisik dan mental untuk mendukung performa artistik.</p>
+        <div class="mt-4">
+          <a href="#contact" class="btn btn-primary me-3">Hubungi Saya</a>
+          <a href="#gallery" class="btn btn-outline-primary">Lihat Portofolio</a>
+        </div>
+      </div>
+      <div class="col-lg-6 animate delay-1">
+        <div class="ps-lg-5">
+          <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid rounded shadow-lg" alt="About Janice">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section section-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Keahlian Profesional</h2>
+      <p class="lead">Berbagai kemampuan yang saya kuasai dan terus kembangkan</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6 animate">
+        <div class="skill-item">
+          <div class="skill-name">
+            <span>Hip-Hop Dance</span>
+            <span>90%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">
+            <span>Ballroom Dance</span>
+            <span>95%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 95%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">
+            <span>Swing Dance</span>
+            <span>85%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 85%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 animate delay-1">
+        <div class="skill-item">
+          <div class="skill-name">
+            <span>Fotografi Potret</span>
+            <span>88%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 88%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">
+            <span>Gimnastik</span>
+            <span>80%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">
+            <span>Basket</span>
+            <span>75%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Portofolio Karya</h2>
+      <p class="lead">Koleksi karya terbaik dalam tari dan fotografi</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 animate">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid" alt="Tari Hip-Hop">
+          <div class="gallery-caption">
+            <h5>Tari Hip-Hop</h5>
+            <p>Penampilan tahun 2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 animate delay-1">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid" alt="Ballroom">
+          <div class="gallery-caption">
+            <h5>Ballroom Dance</h5>
+            <p>Kompetisi Nasional 2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 animate delay-2">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid" alt="Potret Diri">
+          <div class="gallery-caption">
+            <h5>Potret Artistik</h5>
+            <p>Seri Fotografi 2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 animate">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid" alt="Basket">
+          <div class="gallery-caption">
+            <h5>Turnamen Basket</h5>
+            <p>Kejuaraan Sekolah 2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 animate delay-1">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid" alt="Swing Dance">
+          <div class="gallery-caption">
+            <h5>Swing Dance</h5>
+            <p>Festival Tari 2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 animate delay-2">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid" alt="Fotografi">
+          <div class="gallery-caption">
+            <h5>Eksplorasi Fotografi</h5>
+            <p>Proyek Pribadi 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements" class="section section-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Prestasi & Pengalaman</h2>
+      <p class="lead">Pencapaian dan pengalaman profesional saya</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 animate">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h4>Beasiswa Ballroom</h4>
+          <p>Menerima beasiswa prestisius "Young Dance Talent" dari Kementerian Pendidikan dan Kebudayaan untuk pengembangan bakat dalam Ballroom Dance tahun 2023</p>
+        </div>
+      </div>
+      <div class="col-md-4 animate delay-1">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h4>Juara Hip-Hop</h4>
+          <p>Juara 1 Kompetisi Tari Hip-Hop Regional "Urban Dance Challenge" tahun 2022 dan 2023, mengalahkan 50+ peserta dari berbagai daerah</p>
+        </div>
+      </div>
+      <div class="col-md-4 animate delay-2">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h4>Pameran Fotografi</h4>
+          <p>Karya fotografi dipamerkan dalam pameran seni muda "Vision of Youth" 2024 di Galeri Nasional dengan tema "Gerak dan Warna"</p>
+        </div>
+      </div>
+      <div class="col-md-4 animate">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-basketball-ball"></i>
+          </div>
+          <h4>Tim Basket</h4>
+          <p>Anggota tim basket sekolah yang meraih juara 2 turnamen antarsekolah se-provinsi tahun 2023 dengan peran sebagai point guard</p>
+        </div>
+      </div>
+      <div class="col-md-4 animate delay-1">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h4>Pelatihan Gimnastik</h4>
+          <p>Sertifikasi pelatihan gimnastik tingkat dasar dari Federasi Gimnastik Indonesia dengan predikat sangat memuaskan</p>
+        </div>
+      </div>
+      <div class="col-md-4 animate delay-2">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>Workshop Tari</h4>
+          <p>Mengajar workshop tari untuk pemula di komunitas lokal sejak 2022 dengan lebih dari 100 peserta yang telah dilatih</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Hubungi Saya</h2>
+      <p class="lead">Silakan menghubungi untuk kolaborasi atau pertanyaan</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-5 mb-5 mb-lg-0 animate">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="contact-info-text">
+              <h4>Talent Management</h4>
+              <p>@starion.gg</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="contact-info-text">
+              <h4>Contact Person</h4>
+              <p>Oliv - 0821 2304 6080</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info-text">
+              <h4>Email</h4>
+              <p>management@janicekaori.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <h4>Jam Kerja</h4>
+          <p>Senin - Jumat: 09.00 - 17.00 WIB</p>
+          <p>Sabtu: 10.00 - 15.00 WIB</p>
+        </div>
+      </div>
+      <div class="col-lg-7 animate delay-1">
+        <form>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Nama Anda" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="email" class="form-control" placeholder="Email Anda" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Subjek" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="6" placeholder="Pesan Anda" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <a href="#" class="footer-logo">Janice <span>Kaori</span></a>
+        <div class="footer-about">
+          <p>Seniman multitalenta dengan spesialisasi dalam seni pertunjukan dan visual. Menggabungkan disiplin artistik dengan ketelitian teknis untuk menciptakan karya yang memukau.</p>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+        <h4>Tautan Cepat</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#skills">Keahlian</a></li>
+          <li><a href="#gallery">Portofolio</a></li>
+          <li><a href="#achievements">Prestasi</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+        <h4>Layanan</h4>
+        <ul class="footer-links">
+          <li><a href="#">Pertunjukan Tari</a></li>
+          <li><a href="#">Workshop Dance</a></li>
+          <li><a href="#">Sesi Fotografi</a></li>
+          <li><a href="#">Kolaborasi Artistik</a></li>
+          <li><a href="#">Pelatihan Gimnastik</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4>Kontak Info</h4>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Jl. Merdeka No. 123, Tanjung Pinang, Kepulauan Riau</p>
+          <p><i class="fas fa-phone-alt"></i> +62 821 2304 6080</p>
+          <p><i class="fas fa-envelope"></i> management@janicekaori.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-3 mb-md-0">© 2025 Janice Kaori. Seluruh hak cipta dilindungi.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p>Dikelola oleh <a href="#" class="text-white">@starion.gg</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Navbar scroll effect
+  const navbar = document.querySelector('.navbar');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
+  // Back to top button
+  const backToTopButton = document.querySelector('.back-to-top');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.add('active');
+    } else {
+      backToTopButton.classList.remove('active');
+    }
+  });
+  
+  backToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+  
+  // Smooth scrolling for navbar links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 70,
+          behavior: 'smooth'
+        });
+        
+        // Update active nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.classList.remove('active');
+        });
+        this.classList.add('active');
+      }
+    });
+  });
+  
+  // Animation on scroll
+  const animateElements = document.querySelectorAll('.animate');
+  
+  const animateOnScroll = () => {
+    animateElements.forEach(element => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementPosition < windowHeight - 100) {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }
+    });
+  };
+  
+  // Initialize elements as invisible
+  animateElements.forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(30px)';
+    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  });
+  
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
+  
+  // Activate current nav link based on scroll position
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      
+      if (pageYOffset >= sectionTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>
